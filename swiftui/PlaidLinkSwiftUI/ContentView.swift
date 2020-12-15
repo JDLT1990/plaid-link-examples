@@ -40,8 +40,10 @@ struct LinkController: UIViewControllerRepresentable {
     }
     
     func makeUIViewController(context: Context) -> PLKPlaidLinkViewController {
-        let configuration = PLKConfiguration(key: "9a68f1bb1cbc223fff6a70adb33548", env: .sandbox, product: [.transactions])
-        let vc = PLKPlaidLinkViewController(configuration: configuration, delegate: context.coordinator)
+        // Learn more about how to create a link_token at https://plaid.com/docs/#create-link-token
+        #warning("Replace <#GENERATED_LINK_TOKEN#> below with the link_token received from /link/token/create")
+        let configuration = PLKConfiguration(linkToken: "<#GENERATED_LINK_TOKEN#>")
+        let vc = PLKPlaidLinkViewController(linkToken: "<#GENERATED_LINK_TOKEN#>", configuration: configuration, delegate: context.coordinator)
         return vc
     }
     

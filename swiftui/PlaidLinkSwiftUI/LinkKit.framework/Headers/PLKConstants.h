@@ -18,10 +18,11 @@
 
 /**
  Options for specifying the Plaid products to use.
- 
+
  For details about the products visit https://plaid.com/products/.
  */
 typedef NS_OPTIONS(NSInteger, PLKProduct) {
+
     /// Verify accounts for payments without micro-deposits.
     PLKProductAuth         = 1 << 0,
 
@@ -52,6 +53,15 @@ typedef NS_OPTIONS(NSInteger, PLKProduct) {
 
     /// Investments gives clients access to details of their users' investment accounts like holdings and buy/sell transactions
     PLKProductInvestments = 1 << 8,
+
+    /// PaymentInitiation gives clients access to details of their users' investment accounts like holdings and buy/sell transactions
+    PLKProductPaymentInitiation = 1 << 9,
+
+    /// Liabilities Report: Metadata about loans for refinance opportunities
+    PLKProductLiabilitiesReport = 1 << 10,
+
+    /// Deposit switch helps users update their direct deposit to point to a new bank account.
+    PLKProductDepositSwitch = 1 << 11,
 };
 
 
